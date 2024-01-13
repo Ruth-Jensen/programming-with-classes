@@ -47,5 +47,15 @@ class Program
 
         //print the grade the user recieved
         Console.WriteLine($"The grade you recieved is a {letterGrade}");
+
+        //tell the user if they passed or not
+        if (grade >= 70)
+        {
+            Console.WriteLine("You passed");
+        }
+        else
+        {
+            Console.WriteLine("You didn't pass");
+        }
     }
 }
