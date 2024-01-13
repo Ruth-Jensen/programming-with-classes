@@ -12,6 +12,7 @@ class Program
         int grade = int.Parse(input);
         string letterGrade;
 
+        //gives you a grade based on the score inputed
         //A >= 90 B >= 80 C >= 70 D >= 60 F < 60
         if (grade >= 90)
         {
@@ -32,6 +33,16 @@ class Program
         else
         {
             letterGrade = "F";
+        }
+
+        //adds a + or a - sign based on score inputed
+        if (grade % 10 >= 7 && grade !< 90 && grade !> 60)
+        {
+            letterGrade += "+";
+        }
+        else if (grade % 10 < 3 && grade !> 60)
+        {
+            letterGrade += "-";
         }
 
         //print the grade the user recieved
