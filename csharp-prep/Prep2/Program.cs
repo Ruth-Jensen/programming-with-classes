@@ -36,11 +36,11 @@ class Program
         }
 
         //adds a + or a - sign based on score inputed
-        if (grade % 10 >= 7 && grade !< 90 && grade !> 60)
+        if (grade % 10 >= 7 && letterGrade != "A" && letterGrade != "F")
         {
             letterGrade += "+";
         }
-        else if (grade % 10 < 3 && grade !> 60)
+        else if (grade % 10 < 3 && letterGrade != "F")
         {
             letterGrade += "-";
         }
