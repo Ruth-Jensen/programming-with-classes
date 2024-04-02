@@ -14,6 +14,7 @@ class Program
 
         Console.Clear();
         Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.White;
 
         while (isrunning){
 
@@ -40,7 +41,10 @@ class Program
 
             try{
                 currentLocation = (Location)output.Item2;
-                if (successful == "false") { Console.WriteLine("You can't go that way"); }
+                if (successful == "false") {
+                    Console.WriteLine("You can't go that way");
+                    // Warning.FlashColor(3, "red");
+                }
                 else if (successful == "locked") { Console.WriteLine("The door is locked"); }
                 else {Console.WriteLine();}
             }
