@@ -10,7 +10,6 @@ class Program
         bool isInvalidInput = false;
         bool shouldClear = true;
 
-
         while (isRunning)
         {
             if(shouldClear) { Console.Clear(); }
