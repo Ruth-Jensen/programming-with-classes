@@ -38,6 +38,7 @@ class Program
                     break;
                 case "4":
                     file.Save(entry._entryList);
+                    entry._entryList = new List<(DateTime, string, string)>();
                     break;
                 case "5":
                     break;

@@ -9,15 +9,17 @@ public class File
             foreach (var entry in entries)
             {
                 writer.WriteLine($"Date: {entry.date}");
-                writer.WriteLine($"    {entry.prompt}");
-                writer.WriteLine($"    {entry.response}");
+                writer.WriteLine($"    Prompt: {entry.prompt}");
+                writer.WriteLine($"    Response: {entry.response}");
                 writer.WriteLine();
             }
         }
         Console.WriteLine("Saved Successfully.");
+        Load();
     }
     public List<(DateTime date, string prompt, string response)> Load()
     {
+        _entries = new List<(DateTime, string, string)>();
         try
         {
             using (StreamReader reader = new StreamReader("Journal.txt"))
@@ -63,8 +65,8 @@ public class File
             {
                 Console.WriteLine("--------------------------------------------------------------------------");
                 Console.WriteLine($"Date: {singleDate.ToString("MM/dd/yyyy")}");
-                Console.WriteLine($"    {singlePrompt}");
-                Console.WriteLine($"    {singleResponse}");
+                Console.WriteLine($"    Prompt: {singlePrompt}");
+                Console.WriteLine($"    Response: {singleResponse}");
                 Console.WriteLine("--------------------------------------------------------------------------");
                 Console.WriteLine();
             }
