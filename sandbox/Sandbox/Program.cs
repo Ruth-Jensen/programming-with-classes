@@ -1,36 +1,30 @@
 using System;
 
 class Program
-// dotnet new console -o name
-// cd name
-// code .
 {
     static void Main(string[] args)
     {
-        Location mainRoom = new Location();
-        Location northRoom = new Location();
-        Location southRoom = new Location();
-        Location eastRoom = new Location();
-        Location westRoom = new Location();
-        Location attic = new Location();
-        Location basment = new Location();
+        Square square = new Square("red", 3);
+        Rectangle rectangle = new Rectangle("blue", 4, 5);
+        Circle circle = new Circle("green", 6);
 
-        Location currentRoom = mainRoom;
+        List<Shape> shapes = new List<Shape>{square, rectangle, circle};
 
-        mainRoom._above = attic;
-        mainRoom._below = basment;
-        mainRoom._northOfHere = northRoom;
-        mainRoom._southOfHere = southRoom;
-        mainRoom._eastOfHere = eastRoom;
-        mainRoom._westOfHere = westRoom;
+        foreach (Shape shape in shapes){
 
-        attic._below = mainRoom;
-        basment._above = mainRoom;
-        northRoom._southOfHere = mainRoom;
-        southRoom._northOfHere = mainRoom;
-        eastRoom._westOfHere = mainRoom;
-        westRoom._eastOfHere = mainRoom;
+            Console.WriteLine($"The {shape.GetColor()} {shape.GetType()} has an area of {shape.GetArea()}.");
+        }
 
-        
     }
 }
+
+
+
+
+
+
+
+
+// dotnet new console -o name
+// cd name
+// code .
