@@ -1,0 +1,10 @@
+move around the map by typing in: n, s, e, w, ne, nw, se, sw, u, d
+N north S south E east W west
+NE north east NW north west SE south east SW south west
+U up D down
+
+type L to look, UL to unlock a Door, and Q to quit
+when you look around you will be given a list of all the objects in a room
+type the number in front of the item name to pickup the item
+
+your goal is to find the key to the courtyard outside of the mansion and then get out
